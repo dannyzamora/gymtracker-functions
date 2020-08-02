@@ -81,9 +81,9 @@ exports.deleteWorkout = (req, res) => {
 
 exports.postSetWorkout = (req, res) => {
     if (typeof (req.body.reps) !== "number")
-        return res.status(400).json({ comment: "Must be a number" });
+        return res.status(400).json({ reps: "Must be a number" });
     if (typeof (req.body.weight) !== "number")
-        return res.status(400).json({ comment: "Must be a number" });
+        return res.status(400).json({ weight: "Must be a number" });
 
     const newSet = {
         ...req.body,//reps,weight
